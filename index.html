@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scavenger Hunt: Petualangan Asam Basa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      padding: 20px;
+    }
+    .pos {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+    .visible {
+      display: block;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Scavenger Hunt: Petualangan Asam Basa</h1>
+  <p>Selamat datang di Laboratorium Kimia Misterius! Selesaikan setiap pos untuk menemukan kode rahasia pembuka pintu.</p>
+
+  <div id="pos0" class="pos visible">
+    <h2>Petunjuk Awal</h2>
+    <p>Cari pos pertama di dekat rak buku kimia.</p>
+    <button onclick="nextPos(0)">Pergi ke Pos 1</button>
+  </div>
+
+  <div id="pos1" class="pos">
+    <h2>Pos 1: Definisi Asam Basa</h2>
+    <p>Cocokkan teori asam basa berikut:</p>
+    <ul>
+      <li>Arrhenius: ____________</li>
+      <li>Brønsted-Lowry: ____________</li>
+      <li>Lewis: ____________</li>
+    </ul>
+    <p><strong>Kunci:</strong> P</p>
+    <button onclick="nextPos(1)">Lanjut ke Pos 2</button>
+  </div>
+
+  <div id="pos2" class="pos">
+    <h2>Pos 2: Indikator Asam Basa</h2>
+    <p>Identifikasi warna indikator berikut pada larutan asam dan basa:</p>
+    <ul>
+      <li>Lakmus merah: ____________</li>
+      <li>Phenolphthalein: ____________</li>
+    </ul>
+    <p><strong>Kunci:</strong> h</p>
+    <button onclick="nextPos(2)">Lanjut ke Pos 3</button>
+  </div>
+
+  <div id="pos3" class="pos">
+    <h2>Pos 3: Skala pH</h2>
+    <p>Urutkan zat berikut dari paling asam ke basa:</p>
+    <ul>
+      <li>Cuka, Sabun, Air, Jus lemon</li>
+    </ul>
+    <p><strong>Kunci:</strong> +</p>
+    <button onclick="nextPos(3)">Lanjut ke Pos 4</button>
+  </div>
+
+  <div id="pos4" class="pos">
+    <h2>Pos 4: Reaksi Netralisasi</h2>
+    <p>Lengkapi reaksi berikut:</p>
+    <p>HCl + NaOH → ____________</p>
+    <p><strong>Kunci:</strong> p</p>
+    <button onclick="nextPos(4)">Lanjut ke Pos 5</button>
+  </div>
+
+  <div id="pos5" class="pos">
+    <h2>Pos 5: Perhitungan pH</h2>
+    <p>Hitung pH dari larutan dengan [H+] = 1 x 10<sup>-3</sup> M.</p>
+    <p><strong>Kunci:</strong> O</p>
+    <button onclick="nextPos(5)">Lanjut ke Pos 6</button>
+  </div>
+
+  <div id="pos6" class="pos">
+    <h2>Pos 6: Garam dan Hidrolisis</h2>
+    <p>Tentukan sifat dari garam berikut:</p>
+    <p>NH<sub>4</sub>Cl: ____________</p>
+    <p><strong>Kunci:</strong> H</p>
+    <button onclick="nextPos(6)">Lanjut ke Pos Final</button>
+  </div>
+
+  <div id="pos7" class="pos">
+    <h2>Pos Final</h2>
+    <p>Kumpulkan semua kunci: P - h - + - p - O - H</p>
+    <p>Susun kode akhir: <strong>Ph + pOH</strong></p>
+    <p>Selamat! Kalian berhasil keluar dari laboratorium!</p>
+  </div>
+
+  <script>
+    function nextPos(current) {
+      document.getElementById('pos' + current).classList.remove('visible');
+      document.getElementById('pos' + (current + 1)).classList.add('visible');
+    }
+  </script>
+</body>
+</html>
